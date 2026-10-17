@@ -1,0 +1,53 @@
+.book-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-box {
+  position: relative;
+  aspect-ratio: 2/3; /* Exact book dimensions */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: white;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent-color);
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.book-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.pricing-row {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.borrow-price {
+  display: block;
+  font-size: 0.75rem;
+  color: #558b2f;
+}

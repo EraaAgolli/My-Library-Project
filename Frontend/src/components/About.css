@@ -1,0 +1,256 @@
+/* ═══════════════════════════════════════════════════════
+   About.css — Epoch of Books
+   Fraunces + Outfit · cream / navy / gold
+═══════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+.ab-root {
+  font-family: 'Outfit', sans-serif;
+  background: #f5f0e8;
+  color: #1a1a2e;
+  overflow-x: hidden;
+}
+
+/* ── Shared eyebrow ── */
+.ab-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: #c6973f; margin-bottom: 0;
+}
+.ab-eyebrow i {
+  display: inline-block; width: 22px; height: 1.5px;
+  background: #c6973f; flex-shrink: 0; font-style: normal;
+}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+.ab-hero {
+  position: relative;
+  height: 520px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* Background photo */
+.ab-hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+}
+.ab-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  object-position: center 40%;
+  filter: brightness(0.38) saturate(0.7);
+}
+.ab-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13,31,53,0.98) 0%,
+    rgba(13,31,53,0.55) 55%,
+    rgba(13,31,53,0.2)  100%
+  );
+}
+
+/* Content sits at the bottom */
+.ab-hero-content {
+  position: relative; z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px 52px;
+}
+
+.ab-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: #c6973f; margin-bottom: 18px;
+}
+.ab-hero-eyebrow span {
+  display: inline-block; width: 22px; height: 1.5px;
+  background: #c6973f;
+}
+
+.ab-hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 900; color: #fff;
+  line-height: 1.08; letter-spacing: -0.03em;
+  margin: 0 0 18px;
+}
+.ab-hero-title em {
+  font-style: italic; font-weight: 400;
+  color: #c6973f;
+}
+
+.ab-hero-sub {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.75;
+  margin: 0 0 36px;
+  max-width: 440px;
+}
+
+/* Stats row */
+.ab-hero-stats {
+  display: flex; align-items: center; gap: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.ab-hstat {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.ab-hstat strong {
+  font-family: 'Fraunces', serif;
+  font-size: 1.7rem; font-weight: 900;
+  color: #fff; line-height: 1;
+  letter-spacing: -0.02em;
+}
+.ab-hstat span {
+  font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ═══════════════════════════════════════
+   STORY
+═══════════════════════════════════════ */
+.ab-story {
+  background: #faf7f2;
+  border-top: 1px solid rgba(26,26,46,0.08);
+  border-bottom: 1px solid rgba(26,26,46,0.08);
+}
+.ab-story-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 80px 80px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.ab-story-label { padding-top: 6px; }
+.ab-story-body h2.ab-story-title,
+.ab-story-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 700; color: #0d1f35;
+  line-height: 1.2; letter-spacing: -0.02em;
+  margin: 0 0 20px;
+}
+.ab-story-body p {
+  font-size: 0.94rem; color: #5a6a7a;
+  line-height: 1.8; margin: 0 0 16px;
+  max-width: 560px;
+}
+
+/* ═══════════════════════════════════════
+   VALUES
+═══════════════════════════════════════ */
+.ab-values {
+  background: #0d1f35;
+  padding: 88px 80px;
+}
+.ab-values-inner { max-width: 1200px; margin: 0 auto; }
+.ab-values-head { margin-bottom: 52px; }
+.ab-values-head .ab-eyebrow { color: rgba(255,255,255,0.35); }
+.ab-values-head .ab-eyebrow i { background: rgba(255,255,255,0.35); }
+.ab-values-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900; color: #fff;
+  letter-spacing: -0.03em; margin: 12px 0 0;
+}
+.ab-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.ab-vcard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  padding: 28px 24px;
+  transition: background 0.22s, border-color 0.22s, transform 0.22s;
+}
+.ab-vcard:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(198,151,63,0.25);
+  transform: translateY(-4px);
+}
+.ab-vcard-num {
+  font-family: 'Fraunces', serif;
+  font-size: 0.72rem; font-weight: 900;
+  font-style: italic; color: #c6973f;
+  opacity: 0.5; margin-bottom: 16px;
+}
+.ab-vcard-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.ab-vcard-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: #fff; margin: 0 0 10px;
+}
+.ab-vcard-text {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.42);
+  line-height: 1.7; margin: 0;
+}
+
+/* ═══════════════════════════════════════
+   CTA
+═══════════════════════════════════════ */
+.ab-cta { padding: 96px 80px; background: #f5f0e8; text-align: center; }
+.ab-cta-inner { max-width: 560px; margin: 0 auto; }
+.ab-cta-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900; color: #0d1f35;
+  letter-spacing: -0.03em; line-height: 1.1;
+  margin: 0 0 36px;
+}
+.ab-cta-title em {
+  font-style: italic; font-weight: 400; color: #c6973f;
+}
+.ab-cta-btns {
+  display: flex; justify-content: center;
+  gap: 12px; flex-wrap: wrap;
+}
+.ab-btn-primary {
+  background: #0d1f35; color: #fff;
+  padding: 13px 28px; border-radius: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem; font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s, transform 0.15s;
+}
+.ab-btn-primary:hover { background: #1a3555; transform: translateY(-2px); }
+.ab-btn-ghost {
+  background: transparent; color: #0d1f35;
+  border: 1.5px solid rgba(26,26,46,0.18);
+  padding: 13px 28px; border-radius: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem; font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.18s, transform 0.15s;
+}
+.ab-btn-ghost:hover { border-color: #0d1f35; transform: translateY(-2px); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .ab-hero { height: auto; }
+  .ab-hero-content { padding: 0 36px 44px; }
+  .ab-hero-stats { flex-wrap: wrap; gap: 20px; }
+  .ab-story-inner { grid-template-columns: 1fr; padding: 60px 36px; gap: 24px; }
+  .ab-values { padding: 64px 36px; }
+  .ab-values-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .ab-cta { padding: 64px 36px; }
+}
+@media (max-width: 560px) {
+  .ab-hero-content { padding: 0 24px 36px; }
+  .ab-story-inner { padding: 48px 24px; }
+  .ab-values { padding: 48px 24px; }
+  .ab-values-grid { grid-template-columns: 1fr; }
+  .ab-cta { padding: 48px 24px; }
+}
